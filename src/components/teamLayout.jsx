@@ -65,15 +65,15 @@ const renderLayout = (d) =>{
       return( 
         <div key={d.id} className="place-center">
        {d.isImage && <img src={d.image} className="wh-250 br-10"/>}
-        <Memberinfo className='justify-self mt10'/>
+        <Memberinfo className='text-center mt10'/>
         </div> )
 
     case 'circle':
     default:
       return(
-        <div className="place-center">
+        <div className="place-item">
           <img src={d.image} className="wh-80 br-50p"/>
-          <Memberinfo className='justify-self mt10'/>
+          <Memberinfo className='text-center mt10'/>
          </div>
       )
   }}

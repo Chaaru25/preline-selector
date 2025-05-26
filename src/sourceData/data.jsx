@@ -4,38 +4,54 @@ export const sourceData = {
     data: [
       {
         id: 1,
+        isImage:true,
         image: "https://randomuser.me/api/portraits/men/32.jpg",
         name: "David Forren",
         role: "Founder / CEO",
-        description: "Visionary leader passionate about building impactful products and growing talented teams."
+        description: "Visionary leader passionate about building impactful products and growing talented teams.",
+        isSocialMedia:true,
       },
       {
         id: 2,
+        isImage:true,
         image: "https://randomuser.me/api/portraits/women/44.jpg",
         name: "Sophia Allen",
         role: "Chief Operating Officer",
-        description: "Operational expert ensuring smooth execution, team alignment, and delivery excellence."
+        description: "Operational expert ensuring smooth execution, team alignment, and delivery excellence.",
+        isSocialMedia:true,
       },
       {
         id: 3,
+        isImage:true,
         image: "https://randomuser.me/api/portraits/men/65.jpg",
         name: "Michael Chen",
         role: "Lead Engineer",
-        description: "Tech architect focused on scalable systems, clean code, and mentoring junior devs."
+        description: "Tech architect focused on scalable systems, clean code, and mentoring junior devs.",
+        isSocialMedia:true,
       },
       {
         id: 4,
+        isImage:true,
         image: "https://randomuser.me/api/portraits/women/68.jpg",
         name: "Emily Johnson",
         role: "Product Designer",
-        description: "Design thinker crafting intuitive user experiences with empathy and precision."
+        description: "Design thinker crafting intuitive user experiences with empathy and precision.",
+        isSocialMedia:true,
       },
       {
         id: 5,
+        isImage:true,
         image: "https://randomuser.me/api/portraits/men/22.jpg",
         name: "Carlos Rivera",
         role: "Marketing Director",
-        description: "Brand strategist creating campaigns that connect people to products with purpose."
+        description: "Brand strategist creating campaigns that connect people to products with purpose.",
+        isSocialMedia:true,
+      },
+      {
+        name:"  We are hiring!",
+        role:'Checkout/ Careers',
+        isSocialMedia:false,
+        isImage:false,
       }
     ]
   };

@@ -1,4 +1,4 @@
-import './App.css'
+// import './components/teamLayout.css'
 import TeamLayout from './components/teamLayout'
 import {sourceData, circleSourceData} from './sourceData/data'
 

@@ -47,12 +47,9 @@ export const sourceData = {
         description: "Brand strategist creating campaigns that connect people to products with purpose.",
         isSocialMedia:true,
       },
-      {
-        name:"  We are hiring!",
-        role:'Checkout/ Careers',
-        isSocialMedia:false,
-        isImage:false,
-      }
+      // {
+      //   render: () => {}
+      // }
     ]
   };
   

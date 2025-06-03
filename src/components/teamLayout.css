@@ -22,6 +22,9 @@
   .place-item{
     place-items: center;
   }
+  .align-center{
+    align-items: center;
+  }
   .h100{
     height: 100%;
   }
@@ -36,6 +39,10 @@
     width: 240px;
     height: 240px;
   }
+  .nodata-img{
+    width: 400px;
+    height: 250px;
+  }
   .wh-80{
     width: 80px;
     height: 80px;
@@ -49,6 +56,9 @@
     height: 14px;
   }
   /* border radius */
+  .br-12{
+    border-radius: 12px;
+  }
   .br-10{
     border-radius: 10px;
   }
@@ -108,19 +118,29 @@
     margin-block: 10px;
   }
   /* font-size */
-  .font-20{
+  .font20{
     font-size: 20px;
   }
-  .font-18{
+  .font18{
     font-size: 18px;
   }
-  .font-12{
+  .font16{
+    font-size: 16px;
+  }
+  .font12{
     font-size: 12px;
+  }
+  .font14{
+    font-size: 14px;
   }
   
   /* border */
   .b-1-grey{
     border: 1px solid rgb(204, 204, 204);
+  }
+  /* dashed border */
+  .dashed-b-1-grey{
+    border: 1px dashed  rgb(204, 204, 204);
   }
   /* padding */
   .p20{
@@ -171,15 +191,41 @@
     text-decoration: none;
   }
   a{
+    font-size: 12px;
     cursor: pointer;
   }
-  
+
+  @media screen and (max-width:2000px){
+    .g-template-col5{
+      grid-template-columns: repeat(7, 1fr);
+    }
+    .g-template-col3{
+      grid-template-columns: repeat(4,1fr);
+    }
+    .g-template-card{
+      grid-template-columns:repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width:1400px){
+    .g-template-col5{
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .g-template-col3{
+      grid-template-columns: repeat(3,1fr);
+    }
+    .g-template-card{
+      grid-template-columns:repeat(3, 1fr);
+    }
+  }
   @media screen and (max-width:768px){
     .g-template-col5{
       grid-template-columns: repeat(4, 1fr);
     }
     .g-template-col3{
       grid-template-columns: repeat(2,1fr);
+    }
+    .g-template-card{
+      grid-template-columns:repeat(2, 1fr);
     }
     .p20{
       padding:10px;
@@ -191,6 +237,13 @@
       width: 150px;
       height: 150px;
     }
+    .font12{
+      font-size: 10px;
+    }
+    .font16{
+      font-size: 14px;
+    }
+    
    
   }
   @media screen and (max-width:550px){
@@ -207,4 +260,5 @@
     .g-template-col2{
       grid-template-columns: 2fr;
     }
+    
   }

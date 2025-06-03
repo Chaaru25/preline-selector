@@ -24,7 +24,7 @@ function TeamLayout({ type, source }) {
   const showDescription = type === "card";
 
   return (
-    <div className="m24 b-1-grey p20 br-12">
+    <div className="d-grid m24 b-1-grey p20 br-12">
       {source?.data?.length > 0 ? (
         <>
           <div className="text-center">
@@ -109,7 +109,7 @@ function TeamLayout({ type, source }) {
             })}
           </div>
         </>
-      ): <div className="d-grid place-center"><img src="nodatafound.png" className="nodata-img"/></div>}
+      ): <div className=" place-center"><img src="nodatafound.png" className="nodata-img"/></div>}
     </div>
   );
 }

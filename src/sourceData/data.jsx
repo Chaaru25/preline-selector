@@ -8,7 +8,7 @@ export const sourceData = {
     {
       id: 1,
       isImage: true,
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "1.jpg",
       name: "David Forren",
       role: "Founder / CEO",
       description:
@@ -17,7 +17,7 @@ export const sourceData = {
     {
       id: 2,
       isImage: true,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "2.jpg",
       name: "Sophia Allen",
       role: "Chief Operating Officer",
       description:
@@ -51,6 +51,7 @@ export const sourceData = {
         "Brand strategist creating campaigns that connect people to products with purpose.", 
     },
     {
+      id: 6,
       render: (type) => {
         return(
           <CustomRendering type={type} />

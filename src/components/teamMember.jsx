@@ -73,6 +73,5 @@ TeamMember.propTypes = {
     shouldShowSocial:PropTypes.bool,
     showDescription:PropTypes.bool,
     showImage:PropTypes.bool,
-    key:PropTypes.number.isRequired,
 }
 export default TeamMember;

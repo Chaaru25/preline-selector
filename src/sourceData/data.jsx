@@ -9,8 +9,8 @@ export const sourceData = {
       id: 1,
       isImage: true,
       image: "1.jpg",
-      name: "David Forren",
-      role: "Founder / CEO",
+      name: "Tina Bennett",
+      role: "Content Strategist",
       description:
         "Visionary leader passionate about building impactful products and growing talented teams.",
     },
@@ -26,7 +26,7 @@ export const sourceData = {
     {
       id: 3,
       isImage: true,
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      image: "3.jpg",
       name: "Michael Chen",
       role: "Lead Engineer",
       description:
@@ -35,7 +35,7 @@ export const sourceData = {
     {
       id: 4,
       isImage: true,
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "4.jpg",
       name: "Emily Johnson",
       role: "Product Designer",
       description:
@@ -44,7 +44,7 @@ export const sourceData = {
     {
       id: 5,
       isImage: true,
-      image: "https://randomuser.me/api/portraits/men/22.jpg",
+      image: "6.jpg",
       name: "Carlos Rivera",
       role: "Marketing Director",
       description:
@@ -68,15 +68,15 @@ export const circleSourceData = {
   data: [
     {
       id: 1,
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      name: "David Forren",
+      image: "10.jpg",
+      name: "Reena",
       role: "Founder / CEO",
       description:
         "Visionary leader passionate about building impactful products and growing talented teams.",
     },
     {
       id: 2,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "9.jpg",
       name: "Sophia Allen",
       role: "Chief Operating Officer",
       description:
@@ -84,7 +84,7 @@ export const circleSourceData = {
     },
     {
       id: 3,
-      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      image: "8.jpg",
       name: "Michael Chen",
       role: "Lead Engineer",
       description:
@@ -92,7 +92,7 @@ export const circleSourceData = {
     },
     {
       id: 4,
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "7.jpg",
       name: "Emily Johnson",
       role: "Product Designer",
       description:
@@ -100,7 +100,7 @@ export const circleSourceData = {
     },
     {
       id: 5,
-      image: "https://randomuser.me/api/portraits/men/22.jpg",
+      image: "6.jpg",
       name: "Carlos Rivera",
       role: "Marketing Director",
       description:
@@ -108,7 +108,7 @@ export const circleSourceData = {
     },
     {
       id: 6,
-      image: "https://randomuser.me/api/portraits/women/15.jpg",
+      image: "5.jpg",
       name: "Alicia Moore",
       role: "HR Manager",
       description:
@@ -116,7 +116,7 @@ export const circleSourceData = {
     },
     {
       id: 7,
-      image: "https://randomuser.me/api/portraits/men/47.jpg",
+      image: "4.jpg",
       name: "James Blake",
       role: "Financial Analyst",
       description:
@@ -124,7 +124,7 @@ export const circleSourceData = {
     },
     {
       id: 8,
-      image: "https://randomuser.me/api/portraits/women/26.jpg",
+      image: "3.jpg",
       name: "Linda Park",
       role: "UX Researcher",
       description:
@@ -132,7 +132,7 @@ export const circleSourceData = {
     },
     {
       id: 9,
-      image: "https://randomuser.me/api/portraits/men/51.jpg",
+      image: "2.jpg",
       name: "Robert Green",
       role: "DevOps Engineer",
       description:
@@ -140,7 +140,7 @@ export const circleSourceData = {
     },
     {
       id: 10,
-      image: "https://randomuser.me/api/portraits/women/33.jpg",
+      image: "1.jpg",
       name: "Tina Bennett",
       role: "Content Strategist",
       description:

@@ -10,10 +10,8 @@ const App = lazy(() => import('./App.jsx'));
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <ErrorBoundary>
       <Suspense fallback={<FallbackLoader />}>
         <App />
       </Suspense>
-    </ErrorBoundary>
   </StrictMode>,
 )

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import SocialMedia from "./socialMedia";
 import "./teamLayout.css";
 import TeamMember from "./teamMember";
+import ErrorBoundary from "../ErrorBoundary";
 
 TeamLayout.propTypes ={
  type: PropTypes.string.isRequired,
@@ -30,6 +31,7 @@ function TeamLayout(props) {
   const showDescription = props.type === "card";
 
   return (
+    <ErrorBoundary>
     <section className="d-grid m24 b-1-grey p20 br-12">
       {props.source?.data?.length > 0 ? (
         <>
@@ -71,6 +73,7 @@ function TeamLayout(props) {
         </>
       ): <div className="place-center"><img src="nodatafound.png" className="nodata-img" alt='nodatafound'/></div>}
     </section>
+    </ErrorBoundary>
   );
 }
 

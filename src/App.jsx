@@ -1,16 +1,17 @@
 // import './components/teamLayout.css'
-import TeamLayout from './components/teamLayout'
+import ProfileGrid from './components/ProfileGrid'
 import {sourceData, circleSourceData} from './sourceData/data'
 
 function App() {
 
   return (
     <>
-    <TeamLayout type="medium" source={sourceData}/>
-    <TeamLayout type="circle" source={circleSourceData} />
-    <TeamLayout type="inline" source={sourceData} />
-    <TeamLayout type="card" source={sourceData} />
-    <TeamLayout type='sdf' source={sourceData}/>
+    <ProfileGrid type="medium" source={sourceData}/>
+    <ProfileGrid type="circle" source={circleSourceData} />
+    <ProfileGrid type="inline" source={sourceData} />
+    <ProfileGrid type="card" source={sourceData} />
+    <ProfileGrid type='sdf' source={sourceData}/>
+    <ProfileGrid/>
     </>
   )
 }

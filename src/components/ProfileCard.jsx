@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import SocialMedia from "./socialMedia";
 
-let TeamMember = (props) => {
+let ProfileCard = (props) => {
   return (
     <section key={props.member.id} className={`${props.layoutClasses}`}>
       {props.showImage && (
@@ -58,7 +58,7 @@ let TeamMember = (props) => {
     </section>
   );
 };
-TeamMember.propTypes = {
+ProfileCard.propTypes = {
   layoutClasses: PropTypes.string.isRequired,
   imageClasses: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
@@ -69,4 +69,4 @@ TeamMember.propTypes = {
   showImage: PropTypes.bool,
   imgCss:PropTypes.string.isRequired
 };
-export default TeamMember;
+export default ProfileCard;

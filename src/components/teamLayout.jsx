@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import SocialMedia from "./socialMedia";
 import "./teamLayout.css";
 import TeamMember from "./teamMember";
 import ErrorBoundary from "../ErrorBoundary";
@@ -9,27 +8,39 @@ TeamLayout.propTypes ={
  source : PropTypes.object.isRequired,
 }
 function TeamLayout(props) {
-  const layoutClasses = {
-    inline: "d-grid g-template-col2",
-    card: "b-1-grey br-10 p20",
-    medium: "place-center",
-    circle: "place-item",
-  };
 
-  const imageClasses = {
-    inline: "wh-80 br-10",
-    card: "wh-80 br-50p",
-    medium: "wh-240 br-12",
-    circle: "wh-80 br-50p",
-  };
-
-  const shouldShowMemberInfo =
-  props.type !== "card" ||
-    (props.type === "card" && props.source?.data?.some((d) => d.isImage));
-  const shouldShowSocial =
-  props.type !== "circle" && props.type !== "medium" && props.type === "card";
-  const showDescription = props.type === "card";
-
+  const layoutConfig = {
+    inline:{
+      layoutClasses:'d-grid g-template-col2',
+      imageClasses:'wh-80 br-10',
+      shouldShowMemberInfo:true,
+      gridClasses:'g-template-col3 gap-6',
+      imgCss:''
+    },
+    card:{
+      layoutClasses:'b-1-grey br-10 p20',
+      imageClasses:'wh-80 br-50p',
+      shouldShowMemberInfo:props.source?.data?.some((d) => d.isImage),
+      shouldShowSocial:true,
+      showDescription:true,
+      gridClasses:"g-template-card gap-6",
+      imgCss:'d-grid g-template-card2 gap-2',
+    },
+    medium:{
+      layoutClasses:'place-center',
+      imageClasses: 'wh-240 br-12',
+      shouldShowMemberInfo:true,
+      gridClasses:"g-template-col3 gap-6",
+      imgCss:'text-center'
+    },
+    circle:{
+     layoutClasses:'place-item',
+     imageClasses:'wh-80 br-50p',
+     shouldShowMemberInfo:true,
+     gridClasses:"g-template-col5 gap-2",
+     imgCss:'text-center'
+    }
+  }
   return (
     <ErrorBoundary>
     <section className="d-grid m24 b-1-grey p20 br-12">
@@ -42,12 +53,7 @@ function TeamLayout(props) {
 
           <main
             className={`d-grid m24 ${
-              props.type === "circle"
-                ? "g-template-col5 gap-2"
-                : props.type === "card"
-                ? "g-template-card gap-6"
-                : "g-template-col3 gap-6"
-            }`}
+              layoutConfig[props?.type].gridClasses}`}
           >
             {props.source.data.map((memberData,index) => {
               const showImage = memberData.isImage !== false;
@@ -58,14 +64,15 @@ function TeamLayout(props) {
               return (
                 <TeamMember 
                 key={index}
-                layoutClasses={layoutClasses[props.type]}
-                imageClasses={imageClasses[props.type]}
+                layoutClasses={layoutConfig[props.type].layoutClasses}
+                imageClasses={layoutConfig[props.type].imageClasses}
                 type={props.type}
                 member={memberData}
-                shouldShowMemberInfo={shouldShowMemberInfo}
-                shouldShowSocial={shouldShowSocial}
-                showDescription={showDescription}
+                shouldShowMemberInfo={layoutConfig[props.type].shouldShowMemberInfo}
+                shouldShowSocial={layoutConfig[props.type].shouldShowSocial}
+                showDescription={layoutConfig[props.type].showDescription}
                 showImage={showImage}
+                imgCss={layoutConfig[props.type].imgCss}
                 />
               );
             })}

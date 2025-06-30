@@ -10,7 +10,7 @@ function App() {
     <TeamLayout type="circle" source={circleSourceData} />
     <TeamLayout type="inline" source={sourceData} />
     <TeamLayout type="card" source={sourceData} />
-    <TeamLayout />
+    <TeamLayout type='sdf' source={sourceData}/>
     </>
   )
 }

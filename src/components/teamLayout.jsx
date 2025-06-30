@@ -4,7 +4,7 @@ import TeamMember from "./teamMember";
 import ErrorBoundary from "../ErrorBoundary";
 
 TeamLayout.propTypes ={
- type: PropTypes.string.isRequired,
+ type: PropTypes?.oneOf(['inline','card','medium','circle'])?.string?.isRequired,
  source : PropTypes.object.isRequired,
 }
 function TeamLayout(props) {
@@ -41,8 +41,10 @@ function TeamLayout(props) {
      imgCss:'text-center'
     }
   }
+  const isValidType = layoutConfig.hasOwnProperty(props.type);
   return (
     <ErrorBoundary>
+      {isValidType ? 
     <section className="d-grid m24 b-1-grey p20 br-12">
       {props.source?.data?.length > 0 ? (
         <>
@@ -53,7 +55,7 @@ function TeamLayout(props) {
 
           <main
             className={`d-grid m24 ${
-              layoutConfig[props?.type].gridClasses}`}
+              layoutConfig[props?.type]?.gridClasses}`}
           >
             {props.source.data.map((memberData,index) => {
               const showImage = memberData.isImage !== false;
@@ -64,15 +66,15 @@ function TeamLayout(props) {
               return (
                 <TeamMember 
                 key={index}
-                layoutClasses={layoutConfig[props.type].layoutClasses}
-                imageClasses={layoutConfig[props.type].imageClasses}
+                layoutClasses={layoutConfig[props.type]?.layoutClasses}
+                imageClasses={layoutConfig[props.type]?.imageClasses}
                 type={props.type}
                 member={memberData}
-                shouldShowMemberInfo={layoutConfig[props.type].shouldShowMemberInfo}
-                shouldShowSocial={layoutConfig[props.type].shouldShowSocial}
-                showDescription={layoutConfig[props.type].showDescription}
+                shouldShowMemberInfo={layoutConfig[props.type]?.shouldShowMemberInfo}
+                shouldShowSocial={layoutConfig[props.type]?.shouldShowSocial}
+                showDescription={layoutConfig[props.type]?.showDescription}
                 showImage={showImage}
-                imgCss={layoutConfig[props.type].imgCss}
+                imgCss={layoutConfig[props.type]?.imgCss}
                 />
               );
             })}
@@ -80,6 +82,7 @@ function TeamLayout(props) {
         </>
       ): <div className="place-center"><img src="nodatafound.png" className="nodata-img" alt='nodatafound'/></div>}
     </section>
+    :  <div className="place-center"><h2>Type Not Present</h2></div>}
     </ErrorBoundary>
   );
 }
